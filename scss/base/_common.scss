@@ -1,0 +1,24 @@
+/* __________________________________CURRENT_________________________ */
+
+.header__list .header__link.current {
+  color: var(--color-blue);
+}
+
+/* _____________________________________________LOGO_______________ */
+.logo {
+  color: var(--color-blue);
+  font-family: 'raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.78px;
+  margin-right: 93px;
+}
+
+.content {
+  padding-bottom: 94px;
+  padding-top: 94px;
+
+  & .portfolio__btn.current {
+    background-color: var(--color-blue);
+  }
+}
