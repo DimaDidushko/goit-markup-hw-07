@@ -1,61 +1,4 @@
-/* ----------------------------------------BACKDROP---- */
-
-.backdrop {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.1);
-  transition: opacity 250ms, visibility 250ms;
-}
-
-.close-icon {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  fill: #000000;
-  border-color: rgb(0, 0, 0, 0.1);
-  background: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  top: 8px;
-  right: 8px;
-  cursor: pointer;
-  transition: fill 250ms linear;
-  padding: 0px;
-  outline: none;
-}
-
-.modal-close-icon {
-  width: 11px;
-  height: 11px;
-}
-
-.modal-icon-link {
-  width: 11px;
-  height: 11px;
-}
-
-.close-icon:focus,
-.close-icon:hover {
-  fill: #2196f3;
-}
-
-.is-hidden {
-  visibility: none;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
-}
-
-/* ---------------------------------------------------MODAL------------------ */
+/* __________________________________________________________MODAL */
 
 .modal {
   position: absolute;
@@ -149,6 +92,11 @@
   letter-spacing: 0.01em;
   margin-top: 4px;
   outline: none;
+
+  &:focus,
+  &:hover {
+    border-color: #2196f3;
+  }
 }
 
 .comment::placeholder {
@@ -157,11 +105,6 @@
   font-size: 12px;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
-}
-
-.comment:focus,
-.comment:hover {
-  border-color: #2196f3;
 }
 
 .modal-btn {
@@ -259,4 +202,61 @@
 
 .checkbox {
   position: absolute;
+}
+
+/* __________________________________________________BACKDROP*/
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1);
+  transition: opacity 250ms, visibility 250ms;
+}
+
+.close-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  fill: #000000;
+  border-color: rgb(0, 0, 0, 0.1);
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  transition: fill 250ms linear;
+  padding: 0px;
+  outline: none;
+}
+
+.modal-close-icon {
+  width: 11px;
+  height: 11px;
+}
+
+.modal-icon-link {
+  width: 11px;
+  height: 11px;
+}
+
+.close-icon:focus,
+.close-icon:hover {
+  fill: #2196f3;
+}
+
+.is-hidden {
+  visibility: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
 }
